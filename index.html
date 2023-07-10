@@ -313,14 +313,31 @@
       <div class="row mb-3">
         <label for="inputname" class="col-sm-2 col-form-label">Name</label>
         <div class="col-sm-10">
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="bi bi-person-circle"></i>
+            </span>
           <input type="text" class="form-control" placeholder="Full Name" id="inputname">
+          <span class="input-group-text">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter your name"><i class="bi bi-question-circle text-muted"></i></span>
+          </span>
+        </div>
         </div>
       </div>
 
       <div class="row mb-3">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
+          <div class="input-group">
+            <span class="input-group-text">
+              <i class="bi bi-envelope-fill"></i>
+            </span>
           <input type="email" class="form-control" placeholder="example@gmail.com" id="inputEmail3">
+          <span class="input-group-text">
+          <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Enter an email we can reach you">
+            <i class="bi bi-question-circle text-muted"></i></span>
+        </span>
+        </div>
         </div>
       </div>
 
@@ -329,7 +346,28 @@
         <div class="col-sm-10">
           <textarea class="form-control" id="inputmessage" rows="3"></textarea>
         </div>
-        <button type="button" class="btn btn-lg  mt-3  btn-warning">Send Now</button>
+        <button type="button" class="btn btn-lg  mt-3  btn-warning" data-bs-toggle="modal" data-bs-target="#submit-personal">Send Now</button>
+        
+
+
+<!-- Modal -->
+<div class="modal fade" id="submit-personal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to send the details?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Send</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
       </div>
       
